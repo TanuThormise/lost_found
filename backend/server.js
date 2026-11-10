@@ -10,7 +10,7 @@ const itemroute = require("./route/itemroute");
 const app = express();
 app.use(cors());
 const claimroute = require("./route/claimroute");
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 app.use(express.json());
 app.use("/api/auth", authroute);
 app.use("/api/items", itemroute);
